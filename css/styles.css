@@ -35,7 +35,7 @@ body {
 }
 
 .main-cloth-type h1{
-    font-size: 1.7em;
+    font-size: 2em;
     margin-right: 0.5em;
     color: var(--CLOTH-TYPE-COLOR);
 }
