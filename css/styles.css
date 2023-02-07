@@ -1,0 +1,278 @@
+:root{
+    --BODY-BG: rgba(219, 83, 101, 0.616);
+    --BODY-FONT: "Roboto", sans-serif;
+    --CLOTH-TYPE-COLOR: rgb(247, 199, 205);
+    --SECTION-TITLE-TIMER-BGCOLOR: rgb(83, 83, 83);
+    --SECTION-TITLE-TEMPERATURE-BGCOLOR: rgb(54, 54, 54);
+    --SECTION-TITLE-LOAD-BGCOLOR: rgb(34, 34, 34);
+    --SECTION-P-COLOR: rgba(219, 83, 101, 0.616);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--BODY-BG);
+    font-family: var(--BODY-FONT);
+    overflow-x: hidden;
+}
+
+.main{
+    padding-top: 1em;
+    padding-left: 2em;
+    /* padding: 1em 2em; */
+}
+
+.main-cloth-type{
+    display: flex;
+}
+
+.main-cloth-type h1{
+    font-size: 1.2em;
+    margin-right: 0.5em;
+    color: var(--CLOTH-TYPE-COLOR);
+}
+
+.main-cloth-type .active{
+    color: white;
+}
+
+.instructions{
+    font-size: 0.4em;
+    width: 70%;
+    color: whitesmoke;
+    margin: 1em 0;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+}
+
+.section i{
+    display: none;
+}
+
+.section div{
+    width: 100%;
+    height: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-timer{
+    background-color: var(--SECTION-TITLE-TIMER-BGCOLOR);
+    position: relative;
+}
+
+.section-temperature{
+    background-color: var(--SECTION-TITLE-TEMPERATURE-BGCOLOR);
+}
+
+.section-load{
+    background-color: var(--SECTION-TITLE-LOAD-BGCOLOR);
+}
+
+.section p{
+    color: var(--SECTION-P-COLOR);
+    font-size: 1.2em;
+}
+
+.section h2{
+    color: whitesmoke;
+    margin: 0.2em 0;
+}
+
+.start{
+    color: whitesmoke;
+    background-color: black;
+    width: 90%;
+    text-align: center;
+    padding: 0.5em 0;
+    border-radius: 5px;
+    position: absolute;
+    left: 5%;
+    bottom: -10%;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 375px) {
+
+    .main{
+        padding-left: 3em;
+    }
+
+    .section div{
+        width: 85%;
+    }
+
+    .main-cloth-type h1{
+        font-size: 1.2em;
+    }
+
+    .instructions{
+        font-size: 0.4em;
+    }
+}
+
+@media screen and (min-width: 425px){
+    .section div{
+        width: 80%;
+    }
+
+    .instructions{
+        font-size: 0.45em;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .main{
+        padding-top: 2em;
+        padding-left: 6em;
+        /* padding: 1em 3em; */
+    }
+
+    .main-cloth-type h1{
+        font-size: 2.5em;
+    }
+
+    .instructions{
+        font-size: 0.8em;
+    }
+
+    .section{
+        flex-direction: row;
+        width: 100%;
+        margin-top: 3em;
+    }
+
+    .section-timer{
+        position: relative;
+    }
+
+    .section-load{
+        position: relative;
+    }
+
+    .section div{
+        width: 30%;
+    }
+
+    .section i{
+        display: block;
+        background-color: rgb(241, 187, 195);
+        width: 3em;
+        height: 3em;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+
+    .fa-angle-left{
+        left: -3em;
+        top: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .fa-angle-right{
+        right: -3em;
+        top: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .main-cloth-type h1{
+        font-size: 3em;
+    }
+
+    .instructions{
+        font-size: 1em;
+    }
+
+    .section div{
+        width: 25%;
+    }
+
+    .section i{
+        width: 4em;
+        height: 4em;
+    }
+
+    .fa-angle-left{
+        left: -4em;
+    }
+
+    .fa-angle-right{
+        right: -4em;
+    }
+
+    .start:hover{
+        cursor: pointer;
+        transform: translateY(-20%);
+        transition: 0.5s all ease-in-out;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .main{
+        padding-left: 8em;
+    }
+    
+    .main-cloth-type h1{
+        font-size: 4.5em;
+    }
+
+    .instructions{
+        font-size: 1.5em;
+    }
+
+    .section div{
+        width: 26%;
+    }
+
+    .start{
+        padding: 1em 0;
+        bottom: -20%;
+    }
+
+    .section i{
+        width: 5em;
+        height: 5em;
+    }
+
+    .fa-angle-left{
+        left: -5em;
+    }
+
+    .section p{
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    .section h2{
+        font-size: 2em;
+    }
+
+    .fa-angle-right{
+        right: -5em;
+    }
+}
